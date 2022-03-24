@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+
+GET         /todo                       controllers.TodoListController.getAll
+
+POST        /todo                       controllers.TodoListController.addNewItem
+
+GET         /todo/:itemId               controllers.TodoListController.getById(itemId: Long)
+
+PUT         /todo/done/:itemId          controllers.TodoListController.markAsDone(itemId: Long)
+
+DELETE      /todo/done                  controllers.TodoListController.deleteAllDone
+
